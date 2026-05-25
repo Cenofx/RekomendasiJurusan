@@ -6,11 +6,16 @@
   <title>Sistem Rekomendasi Jurusan Kuliah</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <main class="app-shell">
+
+    <!-- HEADER -->
     <section class="top-section">
+
       <div class="brand-block">
-        <img src="graduation.png" alt="Ilustrasi wisuda" class="brand-image" />
+        <img src="graduation.png" alt="Ilustrasi Wisuda" class="brand-image">
+
         <div>
           <h1>SISTEM REKOMENDASI</h1>
           <h2>JURUSAN KULIAH</h2>
@@ -20,132 +25,360 @@
 
       <aside class="how-card">
         <div class="bulb-icon">💡</div>
+
         <div>
           <h3>Cara Kerja Sistem</h3>
-          <p>Sistem akan menganalisis nilai akademik, minat, gaya belajar, dan kepribadian untuk memberikan rekomendasi jurusan yang paling sesuai untuk Anda.</p>
+
+          <p>
+            Sistem akan menganalisis nilai akademik,
+            minat, gaya belajar, dan kepribadian
+            untuk memberikan rekomendasi jurusan
+            terbaik sesuai potensi siswa.
+          </p>
         </div>
       </aside>
+
     </section>
 
+    <!-- CONTENT -->
     <section class="content-grid">
+
+      <!-- FORM -->
       <form class="panel form-panel" onsubmit="proses(event)">
+
         <div class="section-title">
           <span class="title-icon user-icon">👤</span>
           <h3>DATA SISWA</h3>
         </div>
 
+        <!-- NAMA -->
         <div class="field-row">
           <label for="nama">Nama Siswa</label>
-          <input type="text" id="nama" placeholder="Masukkan nama siswa" autocomplete="off" />
+
+          <input
+            type="text"
+            id="nama"
+            placeholder="Masukkan nama siswa"
+            autocomplete="off"
+            required
+          />
         </div>
 
-        <div class="field-row"><label for="mtk">Nilai Matematika</label><input type="number" id="mtk" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="indo">Nilai Bahasa Indonesia</label><input type="number" id="indo" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="inggris">Nilai Bahasa Inggris</label><input type="number" id="inggris" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="fisika">Nilai Fisika</label><input type="number" id="fisika" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="biologi">Nilai Biologi</label><input type="number" id="biologi" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="kimia">Nilai Kimia</label><input type="number" id="kimia" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="ekonomi">Nilai Ekonomi</label><input type="number" id="ekonomi" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="seni">Nilai Seni/Desain</label><input type="number" id="seni" min="0" max="100" placeholder="0 - 100" /></div>
-        <div class="field-row"><label for="komputer">Nilai Komputer</label><input type="number" id="komputer" min="0" max="100" placeholder="0 - 100" /></div>
+        <!-- NILAI -->
+        <div class="field-row">
+          <label for="mtk">Nilai Matematika</label>
 
+          <input
+            type="number"
+            id="mtk"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="indo">Nilai Bahasa Indonesia</label>
+
+          <input
+            type="number"
+            id="indo"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="inggris">Nilai Bahasa Inggris</label>
+
+          <input
+            type="number"
+            id="inggris"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="fisika">Nilai Fisika</label>
+
+          <input
+            type="number"
+            id="fisika"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="biologi">Nilai Biologi</label>
+
+          <input
+            type="number"
+            id="biologi"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="kimia">Nilai Kimia</label>
+
+          <input
+            type="number"
+            id="kimia"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="ekonomi">Nilai Ekonomi</label>
+
+          <input
+            type="number"
+            id="ekonomi"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="seni">Nilai Seni/Desain</label>
+
+          <input
+            type="number"
+            id="seni"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <div class="field-row">
+          <label for="komputer">Nilai Komputer</label>
+
+          <input
+            type="number"
+            id="komputer"
+            min="0"
+            max="100"
+            placeholder="0 - 100"
+            required
+            oninput="if(this.value>100)this.value=100;if(this.value<0)this.value=0"
+          />
+        </div>
+
+        <!-- MINAT -->
         <div class="field-row icon-field">
+
           <span class="side-icon interest-icon">💜</span>
+
           <label for="minat">Minat Utama</label>
-          <select id="minat">
-            <option value="">Pilih minat utama</option>
+
+          <select id="minat" required>
+            <option value="">Pilih Minat Utama</option>
             <option value="Teknologi">Teknologi</option>
             <option value="Kesehatan">Kesehatan</option>
             <option value="Bisnis">Bisnis</option>
             <option value="Seni">Seni</option>
             <option value="Sains">Sains</option>
           </select>
+
         </div>
 
+        <!-- GAYA BELAJAR -->
         <div class="field-row icon-field">
+
           <span class="side-icon learn-icon">📖</span>
+
           <label for="gaya">Gaya Belajar</label>
-          <select id="gaya">
-            <option value="">Pilih gaya belajar</option>
+
+          <select id="gaya" required>
+            <option value="">Pilih Gaya Belajar</option>
             <option value="Visual">Visual</option>
             <option value="Analitis">Analitis</option>
             <option value="Praktik">Praktik</option>
             <option value="Komunikatif">Komunikatif</option>
           </select>
+
         </div>
 
+        <!-- KEPRIBADIAN -->
         <div class="field-row icon-field">
+
           <span class="side-icon person-icon">👨‍🎓</span>
+
           <label for="kepribadian">Kepribadian</label>
-          <select id="kepribadian">
-            <option value="">Pilih kepribadian</option>
+
+          <select id="kepribadian" required>
+            <option value="">Pilih Kepribadian</option>
             <option value="Logis">Logis</option>
             <option value="Empatis">Empatis</option>
             <option value="Kreatif">Kreatif</option>
             <option value="Pemimpin">Pemimpin</option>
             <option value="Teliti">Teliti</option>
           </select>
+
         </div>
 
+        <!-- BUTTON -->
         <div class="button-row">
-          <button type="submit" class="primary-btn"><span>⚙</span> PROSES REKOMENDASI</button>
-          <button type="button" class="reset-btn" onclick="resetForm()"><span>⟳</span> RESET</button>
+
+          <button type="submit" class="primary-btn">
+            <span>⚙</span>
+            PROSES REKOMENDASI
+          </button>
+
+          <button
+            type="button"
+            class="reset-btn"
+            onclick="resetForm()"
+          >
+            <span>⟳</span>
+            RESET
+          </button>
+
         </div>
+
       </form>
 
+      <!-- RESULT -->
       <section class="panel result-panel">
+
         <div class="section-title result-title">
           <span class="title-icon trophy-small">🏆</span>
           <h3>HASIL REKOMENDASI</h3>
         </div>
 
+        <!-- PODIUM -->
         <div class="podium-grid">
+
           <article class="podium-card first">
             <div class="rank-badge">1</div>
-            <img src="trophy.png" alt="Piala emas" />
+
+            <img src="trophy.png" alt="Piala Emas">
+
             <h4 id="j1">Jurusan Terbaik</h4>
+
             <p id="s1">Skor: 0</p>
           </article>
+
           <article class="podium-card second">
             <div class="rank-badge">2</div>
-            <img src="trophy.png" alt="Piala perak" />
+
+            <img src="trophy.png" alt="Piala Perak">
+
             <h4 id="j2">Jurusan Kedua</h4>
+
             <p id="s2">Skor: 0</p>
           </article>
+
           <article class="podium-card third">
             <div class="rank-badge">3</div>
-            <img src="trophy.png" alt="Piala perunggu" />
+
+            <img src="trophy.png" alt="Piala Perunggu">
+
             <h4 id="j3">Jurusan Ketiga</h4>
+
             <p id="s3">Skor: 0</p>
           </article>
+
         </div>
 
+        <!-- DETAIL -->
         <div class="detail-card">
-          <h4><span>▮▮▮</span> DETAIL HASIL REKOMENDASI</h4>
+
+          <h4>
+            <span>▮▮▮</span>
+            DETAIL HASIL REKOMENDASI
+          </h4>
+
           <table>
+
             <thead>
-              <tr><th>Peringkat</th><th>Jurusan</th><th>Skor Kecocokan</th></tr>
+              <tr>
+                <th>Peringkat</th>
+                <th>Jurusan</th>
+                <th>Skor</th>
+              </tr>
             </thead>
+
             <tbody id="detail-body">
-              <tr><td>1</td><td>-</td><td>0</td></tr>
-              <tr><td>2</td><td>-</td><td>0</td></tr>
-              <tr><td>3</td><td>-</td><td>0</td></tr>
-              <tr><td>4</td><td>-</td><td>0</td></tr>
-              <tr><td>5</td><td>-</td><td>0</td></tr>
+
+              <tr>
+                <td>1</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+
             </tbody>
+
           </table>
+
         </div>
 
+        <!-- NOTE -->
         <div class="note-card">
+
           <div class="note-icon">ⓘ</div>
+
           <div>
+
             <h4>Catatan Algoritma</h4>
-            <p>Sistem ini menggunakan metode scoring berbasis Decision Tree sederhana. Setiap jurusan diberikan skor berdasarkan kecocokan nilai akademik, minat, gaya belajar, dan kepribadian siswa. Jurusan dengan skor tertinggi akan menjadi rekomendasi utama bagi siswa.</p>
+
+            <p>
+              Sistem menggunakan metode scoring
+              berbasis kecocokan nilai akademik,
+              minat, gaya belajar, dan kepribadian
+              siswa untuk menentukan rekomendasi
+              jurusan terbaik.
+            </p>
+
           </div>
-          <img src="book.png" alt="Buku dan tanaman" />
+
+          <img src="book.png" alt="Ilustrasi Buku">
+
         </div>
+
       </section>
+
     </section>
+
   </main>
 
   <script src="script.js"></script>
